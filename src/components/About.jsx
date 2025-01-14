@@ -1,27 +1,3 @@
-// import { motion } from 'framer-motion';
-
-// const About = () => {
-//   return (
-//     <motion.div
-//       initial={{ opacity: 0, y: 50 }} // Start off invisible and slightly below
-//       animate={{ opacity: 1, y: 0 }}  // Fade in and move to its final position
-//       transition={{ duration: 0.8 }}  // Animation duration in seconds
-//       className="p-10 text-center bg-gray-100"
-//     >
-//       <h2 className="text-5xl font-bold mb-4">About Me</h2>
-//       <p className="text-lg">
-//       I’m a curious and adaptable developer who enjoys working on diverse projects. From building tools and applications to solving technical challenges, I approach my work with focus and practicality.
-    
-//       I value continuous learning and enjoy tackling new problems that expand my understanding and skills. My goal is to contribute to meaningful projects and work environments where I can grow while making a positive impact.
-//       </p>
-//     </motion.div>
-//   );
-// };
-
-// export default About;
-
-
-
 
 import React from 'react';
 import avatarImage from '/src/assets/avatar.png'
@@ -47,7 +23,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="p-10 bg-gradient-to-b from-gray-800 to-gray-900 text-white">
+    // <section id="about" className="p-10 bg-gradient-to-b from-gray-800 to-gray-900 text-white">
+    <section id="about" className="p-10 bg-gradient-to-b from-gray-800 to-black text-white">
+
       <div className="max-w-7xl mx-auto grid gap-8 md:grid-cols-2 px-4">
         {/* About Me Card */}
         <div className="p-6 bg-gray-800 rounded-lg shadow-md max-w-lg mx-auto">
@@ -56,7 +34,7 @@ const About = () => {
             src={avatarImage}
             alt="Avatar"
             className="mx-auto mb-4  border-4 border-gray-600 shadow-lg"
-            style={{ width: '12.5rem', height: '12.5rem' }}
+            style={{ width: '14.5rem', height: '14.5rem' }}
           />
           <p className="text-lg leading-relaxed">
             I’m a curious and adaptable developer who enjoys working on diverse projects. 
