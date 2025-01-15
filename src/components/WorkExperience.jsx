@@ -1,4 +1,6 @@
 import React from "react";
+import knok from '/src/assets/knoklife_logo.png'
+
 
 const WorkExperience = () => {
   return (
@@ -22,10 +24,16 @@ const WorkExperience = () => {
           {/* Experience 1 */}
           <div className="flex items-start bg-gray-800 p-6 rounded-lg shadow-md">
             {/* Icon or Logo */}
-            <img
+            {/* <img
               src="/src/assets/knoklife_logo.png" 
               alt="Company Logo"
               className="w-12 h-12 rounded-full mr-4 object-cover"
+            /> */}
+
+            <img
+            src={knok}
+            alt="Knok"
+            className="w-12 h-12 rounded-full mr-4 object-cover"
             />
             <div>
               <h3 className="text-xl font-bold">Company Name</h3>
