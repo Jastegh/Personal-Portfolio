@@ -1,5 +1,7 @@
 import React from "react";
 import knok from '/src/assets/knoklife_logo.png'
+import dataglacier from '/src/assets/data_glacier.png'
+
 
 
 const WorkExperience = () => {
@@ -26,16 +28,16 @@ const WorkExperience = () => {
             {/* Icon or Logo */}
 
             <img
-            src={knok}
-            alt="Knok"
+            src={dataglacier}
+            alt="Data Glacier Logo"
             className="w-12 h-12 rounded-full mr-4 object-cover"
             />
             <div>
-              <h3 className="text-xl font-bold">Company Name</h3>
+              <h3 className="text-xl font-bold">Data Glacier</h3>
               <p className="text-sm text-gray-400">
                 Software Developer — December 2024 - Present
               </p>
-              <p className="text-gray-300 mt-4">Description</p>
+              <p className="text-gray-300 mt-4">Engaged in a hands-on internship designed to enhance practical skills in software development and deployment. Worked on individual and collaborative projects, utilizing tools like Git for version control, Flask for web development, and Agile methodologies (Scrum/Kanban) for project management. Focused on API development, feature engineering, and deploying scalable applications, while leveraging resources and support to overcome challenges and deliver impactful solutions.</p>
             </div>
           </div>
 
