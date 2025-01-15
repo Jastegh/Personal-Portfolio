@@ -23,7 +23,7 @@ const WorkExperience = () => {
           <div className="flex items-start bg-gray-800 p-6 rounded-lg shadow-md">
             {/* Icon or Logo */}
             <img
-              src="/src/assets/knoklife_logo.jpeg" 
+              src="/src/assets/knoklife_logo.png" 
               alt="Company Logo"
               className="w-12 h-12 rounded-full mr-4 object-cover"
             />
@@ -40,7 +40,7 @@ const WorkExperience = () => {
           <div className="flex items-start bg-gray-800 p-6 rounded-lg shadow-md">
             {/* Icon or Logo */}
             <img
-              src="/src/assets/knoklife_logo.jpeg" // Replace with actual logo
+              src="/src/assets/knoklife_logo.png" // Replace with actual logo
               alt="Knok-TELUS Logo"
               className="w-12 h-12 rounded-full mr-4 object-cover"
             />

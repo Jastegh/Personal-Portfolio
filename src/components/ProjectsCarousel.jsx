@@ -9,7 +9,7 @@ const projects = [
         description: ' A UNIX-style command-line shell in C, featuring core OS functions like process control, signal handling, and inter-process communication. Added support for built-in commands (cd, pwd, exit), background execution, input/output redirection, and piping. Utilized system calls (fork, execve, pipe) for efficient and reliable command execution.',
         tech: ['React', 'Tailwind', 'Vue', 'HTML5'],
         link: 'https://github.com/Jastegh/Dragonshell',
-        image: '/src/assets/dragonshell.webp', 
+        image: '/src/assets/dragonshell.png', 
       },
       {
         title: ' Social Distribution ',
@@ -17,21 +17,21 @@ const projects = [
         tech: ['React', 'Node.js', 'Stripe', 'CSS'],
         link: 'https://github.com/cmput-404-transparent/social-distribution',
         liveLink: 'https://jastegh-socialdistribution-c7853f320baf.herokuapp.com/login',
-        image: '/src/assets/socialdistribution.webp',
+        image: '/src/assets/socialdistribution.png',
       },
       {
         title: ' ByteSnake ',
         description: ' A functional Snake game in RISC-V Assembly, featuring efficient game logic with real-time snake movement, collision detection, and randomized apple generation via a Linear Congruential Generator. Utilized memory-mapped I/O for direct keyboard and display control, leveraging timer interrupts for precise, responsive gameplay.',
         tech: ['React', 'Node.js', 'Stripe', 'CSS'],
         link: 'https://github.com/Jastegh/ByteSnake',
-        image: '/src/assets/bytesnake.webp',
+        image: '/src/assets/bytesnake.png',
       },
       {
         title: '  QR Dasher ',
         description: ' An Android app for event check-ins using QR codes, geolocation-based attendance verification, featuring profile creation, and event organization. Included real-time notifications and an interactive leaderboard to enhance user experience.',
         tech: ['React', 'Node.js', 'Stripe', 'CSS'],
         link: 'https://github.com/CMPUT301W24T22/QR-Dasher',
-        image: '/src/assets/qrdasher.webp',
+        image: '/src/assets/qrdasher.png',
       },
 ];
 
