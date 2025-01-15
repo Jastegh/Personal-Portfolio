@@ -3,13 +3,19 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import socialdistribution from '/src/assets/socialdistribution.png'
+import dragonshell from '/src/assets/dragonshell.png'
+import bytesnake from '/src/assets/bytesnake.png'
+import qrdasher from '/src/assets/qrdasher.png'
+
+
 const projects = [
     {
         title: ' Dragonshell (UNIX Shell)',
         description: ' A UNIX-style command-line shell in C, featuring core OS functions like process control, signal handling, and inter-process communication. Added support for built-in commands (cd, pwd, exit), background execution, input/output redirection, and piping. Utilized system calls (fork, execve, pipe) for efficient and reliable command execution.',
         tech: ['React', 'Tailwind', 'Vue', 'HTML5'],
         link: 'https://github.com/Jastegh/Dragonshell',
-        image: '/src/assets/dragonshell.png', 
+        image: dragonshell, 
       },
       {
         title: ' Social Distribution ',
@@ -17,21 +23,21 @@ const projects = [
         tech: ['React', 'Node.js', 'Stripe', 'CSS'],
         link: 'https://github.com/cmput-404-transparent/social-distribution',
         liveLink: 'https://jastegh-socialdistribution-c7853f320baf.herokuapp.com/login',
-        image: '/src/assets/socialdistribution.png',
+        image: socialdistribution,
       },
       {
         title: ' ByteSnake ',
         description: ' A functional Snake game in RISC-V Assembly, featuring efficient game logic with real-time snake movement, collision detection, and randomized apple generation via a Linear Congruential Generator. Utilized memory-mapped I/O for direct keyboard and display control, leveraging timer interrupts for precise, responsive gameplay.',
         tech: ['React', 'Node.js', 'Stripe', 'CSS'],
         link: 'https://github.com/Jastegh/ByteSnake',
-        image: '/src/assets/bytesnake.png',
+        image: bytesnake,
       },
       {
         title: '  QR Dasher ',
         description: ' An Android app for event check-ins using QR codes, geolocation-based attendance verification, featuring profile creation, and event organization. Included real-time notifications and an interactive leaderboard to enhance user experience.',
         tech: ['React', 'Node.js', 'Stripe', 'CSS'],
         link: 'https://github.com/CMPUT301W24T22/QR-Dasher',
-        image: '/src/assets/qrdasher.png',
+        image: qrdasher,
       },
 ];
 
