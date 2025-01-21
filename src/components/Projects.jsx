@@ -5,20 +5,28 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   const projects = [
     {
+      title: ' Social Distribution ',
+      description: '  A scalable, decentralized social networking, enabling cross-node post sharing, secure user interactions, and real-time content aggregation. Leveraged an advanced inbox model to distribute posts across nodes with flexible privacy settings (public, unlisted, friends-only), creating a connected network of independent nodes',
+      tech: ['React', 'Node.js', 'Stripe', 'CSS'],
+      link: 'https://github.com/cmput-404-transparent/social-distribution',
+      liveLink: 'https://jastegh-socialdistribution-c7853f320baf.herokuapp.com/login',
+      image: '/src/assets/socialdistribution.webp',
+    },
+    {
+      title: ' Adaptive Agents with Streaming Deep RL ',
+      description: '  In this project, I worked on enhanced Streaming Deep Reinforcement Learning (RL) by integrating Real-Time Recurrent Learning (RTRL) to tackle the challenge of partial observability. We implemented RTRL in Python and combined it with a streaming RL framework to enable agents to dynamically encode and utilize historical information in real time, without relying on replay buffers. Our work involved testing the integrated model in simulated environments like Atari games, where it demonstrated improved performance, adaptability, and computational efficiency. This project highlights the practical potential of streaming RL for real-world applications in robotics, healthcare, and beyond.',
+      tech: ['Python', 'Stable-Baselines3', 'PyTorch', 'NumPy'],
+      link: 'https://github.com/CMPUT-469-iRL/iRL',
+      image: '/src/assets/rl.webp',
+    },
+    {
       title: ' Dragonshell (UNIX Shell)',
       description: ' A UNIX-style command-line shell in C, featuring core OS functions like process control, signal handling, and inter-process communication. Added support for built-in commands (cd, pwd, exit), background execution, input/output redirection, and piping. Utilized system calls (fork, execve, pipe) for efficient and reliable command execution.',
       tech: ['React', 'Tailwind', 'Vue', 'HTML5'],
       link: 'https://github.com/Jastegh/Dragonshell',
       image: '/src/assets/dragonshell.webp', 
     },
-    {
-      title: ' Social Distribution ',
-      description: '  a scalable, decentralized social networking, enabling cross-node post sharing, secure user interactions, and real-time content aggregation. Leveraged an advanced inbox model to distribute posts across nodes with flexible privacy settings (public, unlisted, friends-only), creating a connected network of independent nodes',
-      tech: ['React', 'Node.js', 'Stripe', 'CSS'],
-      link: 'https://github.com/cmput-404-transparent/social-distribution',
-      liveLink: 'https://jastegh-socialdistribution-c7853f320baf.herokuapp.com/login',
-      image: '/src/assets/socialdistribution.webp',
-    },
+   
     {
       title: ' ByteSnake ',
       description: ' A functional Snake game in RISC-V Assembly, featuring efficient game logic with real-time snake movement, collision detection, and randomized apple generation via a Linear Congruential Generator. Utilized memory-mapped I/O for direct keyboard and display control, leveraging timer interrupts for precise, responsive gameplay.',

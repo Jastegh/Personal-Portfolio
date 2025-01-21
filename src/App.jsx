@@ -9,6 +9,10 @@ import ProjectsCarousel from "./components/ProjectsCarousel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import WorkExperience from "./components/WorkExperience";
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei'; 
+
+
 
 
 export default function App() {
@@ -31,10 +35,28 @@ export default function App() {
 
   </div>
 
-  {/* 3D Model
-  <div className="w-full flex justify-center mb-10">
-    <Scene />
-  </div> */}
+  {/* 3D Model */}
+  {/* <div className="w-full h-96 flex justify-center items-center">
+          <Canvas>
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[2, 5, 2]} />
+            <Scene /> 
+            <OrbitControls enableZoom={true} />
+            
+          </Canvas>
+        </div> */}
+
+
+{/* <div className="w-full h-[500px] flex justify-center items-center">
+  <Canvas camera={{ position: [0, 1, 5], fov: 35 }}>
+    <ambientLight intensity={0.5} />
+    <directionalLight position={[2, 5, 2]} />
+    <Scene /> 
+    <OrbitControls enableZoom={false} />
+  </Canvas>
+</div> */}
+
+
 
   {/* Buttons */}
   <div className="flex space-x-4">
