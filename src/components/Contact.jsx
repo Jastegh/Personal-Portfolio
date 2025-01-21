@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,6 +27,12 @@ const Contact = () => {
 
       <div className="max-w-5xl mx-auto p-6 border border-gray-600 rounded-lg bg-gray-800">
         <h2 className="text-4xl font-bold mb-6 text-center">Contact Me</h2>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <input
             type="text"
@@ -54,6 +62,8 @@ const Contact = () => {
             Send Message
           </button>
         </form>
+        </motion.div>
+
       </div>
     </section>
   );
