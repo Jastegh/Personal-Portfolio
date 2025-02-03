@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import WorkExperience from "./components/WorkExperience";
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei'; 
+import { motion } from 'framer-motion';
 
 
 
@@ -60,19 +61,25 @@ export default function App() {
 
   {/* Buttons */}
   <div className="flex space-x-4">
-    <a
+    <motion.a
       href="#projects"
       className="px-6 py-3 bg-white text-blue-600 rounded-lg shadow hover:bg-gray-200"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
     >
       View My Work
-    </a>
-    <a
+    </motion.a>
+
+    <motion.a
       href="#contact"
       className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
     >
       Let's Collaborate
-    </a>
+    </motion.a>
   </div>
+
   <div className="wave"></div>
 </header>
 

@@ -92,16 +92,16 @@ const ProjectsCarousel = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    autoplay: true, // Enable auto sliding
+    autoplaySpeed: 3000, // Set slide change interval (4 seconds)
   };
 
   return (
-    // <section id="projects" className="px-20 py-16 bg-gray-900 text-white">
     <section id="projects" className="p-10 bg-gradient-to-b from-black to-gray-800 text-white">
-
       <h2 className="text-5xl font-bold text-center mb-12 text-purple-100">Projects</h2>
       <Slider {...settings}>
         {projects.map((project, index) => (
@@ -113,5 +113,6 @@ const ProjectsCarousel = () => {
     </section>
   );
 };
+
 
 export default ProjectsCarousel;
