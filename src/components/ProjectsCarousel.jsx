@@ -7,7 +7,7 @@ import socialdistribution from '/src/assets/socialdistribution.png'
 import dragonshell from '/src/assets/dragonshell.png'
 import bytesnake from '/src/assets/bytesnake.png'
 import qrdasher from '/src/assets/qrdasher.png'
-
+import rl from '/src/assets/rl.webp'
 
 const projects = [
     
@@ -24,7 +24,7 @@ const projects = [
         description: '  In this project, I worked on enhanced Streaming Deep Reinforcement Learning (RL) by integrating Real-Time Recurrent Learning (RTRL) to tackle the challenge of partial observability. We implemented RTRL in Python and combined it with a streaming RL framework to enable agents to dynamically encode and utilize historical information in real time, without relying on replay buffers. Our work involved testing the integrated model in simulated environments like Atari games, where it demonstrated improved performance, adaptability, and computational efficiency. This project highlights the practical potential of streaming RL for real-world applications in robotics, healthcare, and beyond.',
         tech: ['Python', 'Stable-Baselines3', 'PyTorch', 'NumPy'],
         link: 'https://github.com/CMPUT-469-iRL/iRL',
-        image: '/src/assets/rl.webp',
+        image: rl,
       },
       {
         title: ' Dragonshell (UNIX Shell)',
