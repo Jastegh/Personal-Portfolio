@@ -1,6 +1,7 @@
 import React from "react";
 import knok from '/src/assets/knoklife_logo.png'
 import dataglacier from '/src/assets/data_glacier.png'
+import UofA from '/src/assets/UofA.png'
 import fluenty from '/src/assets/fluenty.png'
 import { motion } from "framer-motion";
 
@@ -19,10 +20,48 @@ const WorkExperience = () => {
       title: "Software Developer",
       company: "Fluenty",
       date: "January 2024 - Present",
-      description:
-        "Led the development of a web-based platform for Fluenty, enabling Brazilian students to connect with native Canadian English speakers. My work included designing and implementing key features such as session scheduling with Zoom/Google Meet integration, gamified learning tools, and progress tracking with detailed analytics. I also integrated AI-driven personalized feedback to optimize learning outcomes. The project emphasized usability, security, and scalability, ensuring a seamless experience for school administrators, instructors, and students across desktop and mobile platforms.",
+      description: (
+        <ul className="list-disc text-gray-300 pl-5 mt-4">
+          <li>
+          Led the development of a web-based platform for Fluenty, managing a cross-functional team of developers and
+          educators to enhance English education for 20,000+ students.
+          </li>
+          <li>
+          My work included designing and implementing key features such as session scheduling with Google Meet integration, AI-based recommendation algorithms for personalized learning, gamified learning tools, real-time progress tracking, and
+          optimizing backend performance (Django, Supabse, WebSockets), improving student engagement by 40%
+          </li>
+          <li>
+          As a Product Owner, managed task delegation and team alignment, overcoming challenges to improve sprint
+          efficiency and cross-team collaboration.
+          </li>
+        </ul>
+      ),
       logo: fluenty,
     },
+
+    {
+      title: "Machine Learning Engineer",
+      company: "UofA CS",
+      date: "Jan 2024 - April 2025",
+      description: (
+        <ul className="list-disc text-gray-300 pl-5 mt-4">
+          <li>
+          Developed a real-time reinforcement learning (RL) system for decision-making in partially observable environments,
+          optimizing reward functions and adaptability using eLSTM and RTUs.
+          </li>
+          <li>
+          Designed and implemented Streaming Deep RL architectures in Python, and PyTorch achieving a 30%
+          improvement in reward optimization on benchmark POMDP tasks.
+          </li>
+          <li>
+          Applied Real-Time Recurrent Learning (RTRL) to train deep RL models efficiently in streaming settings,
+          eliminating the need for replay buffers.
+          </li>
+        </ul>
+      ),
+      logo: UofA,
+    },
+
     {
       title: "Sales Manager",
       company: "Knok-TELUS",
