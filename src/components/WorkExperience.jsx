@@ -23,16 +23,13 @@ const WorkExperience = () => {
       description: (
         <ul className="list-disc text-gray-300 pl-5 mt-4">
           <li>
-          Led the development of a web-based platform for Fluenty, managing a cross-functional team of developers and
-          educators to enhance English education for 20,000+ students.
+          Led the development of a web-based learning platform, managing a cross-functional team of developers and educators to enhance English learning for over 20,000 students.
           </li>
           <li>
-          My work included designing and implementing key features such as session scheduling with Google Meet integration, AI-based recommendation algorithms for personalized learning, gamified learning tools, real-time progress tracking, and
-          optimizing backend performance (Django, Supabse, WebSockets), improving student engagement by 40%
+          Implemented AI-based recommendation algorithms for personalized learning, real-time progress tracking, and optimized backend performance (Django, Supabase, WebSockets), improving student engagement by 40%
           </li>
           <li>
-          As a Product Owner, managed task delegation and team alignment, overcoming challenges to improve sprint
-          efficiency and cross-team collaboration.
+          As a Product Owner, managed task delegation and sprint planning across a team of 8 developers, overcoming challenges to improve sprint efficiency and cross-team collaboration.
           </li>
         </ul>
       ),
@@ -46,16 +43,13 @@ const WorkExperience = () => {
       description: (
         <ul className="list-disc text-gray-300 pl-5 mt-4">
           <li>
-          Developed a real-time reinforcement learning (RL) system for decision-making in partially observable environments,
-          optimizing reward functions and adaptability using eLSTM and RTUs.
+          Developed streaming and batch RL agents using Stream-Q(λ), evaluating them in partially observable T-maze environments; eLSTM-RTRL agents achieved up to 40% faster convergence than BPTT in long-horizon tasks.
           </li>
           <li>
-          Designed and implemented Streaming Deep RL architectures in Python, and PyTorch achieving a 30%
-          improvement in reward optimization on benchmark POMDP tasks.
+          Implemented and benchmarked RTRL-based eLSTM and RTU architectures on sequence prediction (Copy Task), achieving {'>'}95% accuracy with eLSTM, demonstrating improved memory retention over RTUs
           </li>
           <li>
-          Applied Real-Time Recurrent Learning (RTRL) to train deep RL models efficiently in streaming settings,
-          eliminating the need for replay buffers.
+          Applied Real-Time Recurrent Learning (RTRL) for fully online gradient updates, enabling RL agents to learn in partially observable environments without replay buffers, improving learning efficiency in POMDP settings.
           </li>
         </ul>
       ),
