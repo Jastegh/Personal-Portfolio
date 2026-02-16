@@ -45,64 +45,99 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="p-10 bg-gradient-to-r from-gray-900 to-black text-white">
-  <h2 className="text-5xl font-bold text-center mb-12">Projects</h2>
-  <div className="space-y-8">
-    {projects.map((project, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: index * 0.2 }}
-        className="flex flex-col md:flex-row items-center bg-gray-800 rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto"
-      >
-        {/* Project Image */}
-        <div className="w-full md:w-5/12 h-48">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
+    <section
+      id="projects"
+      className="bg-gradient-to-b from-slate-950 via-slate-950 to-black py-16 text-white sm:py-20 lg:py-24"
+    >
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 md:px-10 lg:px-16">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: [0.22, 0.9, 0.3, 1] }}
+          className="max-w-2xl"
+        >
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-300">
+            Projects
+          </p>
+          <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl">
+            Selected work I&apos;m proud of.
+          </h2>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-300/90 sm:text-base">
+            Real projects that shipped, broke, and got refined. Each one taught me something about
+            reliability, UX, and working with constraints.
+          </p>
+        </motion.div>
 
-        {/* Project Details */}
-        <div className="p-6 w-full md:w-7/12">
-          <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-          <p className="text-gray-400 mb-3">{project.description}</p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {project.tech.map((tech, i) => (
-              <span
-                key={i}
-                className="px-3 py-1 text-sm bg-gray-700 rounded-full text-gray-200"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-          <div className="flex space-x-4">
-            <a
-              href={project.link}
-              className="text-blue-400 hover:text-blue-300 font-semibold"
+        <div className="grid gap-8 lg:gap-10">
+          {projects.map((project, index) => (
+            <motion.article
+              key={project.title}
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.6,
+                ease: [0.22, 0.9, 0.3, 1],
+                delay: index * 0.08,
+              }}
+              className="flex flex-col gap-5 md:flex-row md:items-stretch"
             >
-              View Project →
-            </a>
-            {project.liveLink && (
-              <a
-                href={project.liveLink}
-                className="text-green-400 hover:text-green-300 font-semibold"
-              >
-                Live Site →
-              </a>
-            )}
-          </div>
+              <div className="relative w-full overflow-hidden rounded-3xl bg-slate-900/70 md:w-5/12">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-56 w-full object-cover md:h-full"
+                />
+              </div>
+
+              <div className="relative w-full md:w-7/12">
+                <div className="card-border-animated p-[1px] rounded-3xl">
+                  <div className="relative flex h-full flex-col justify-between rounded-[1.4rem] bg-slate-950/90 px-6 py-6 shadow-[0_20px_70px_rgba(15,23,42,0.9)] sm:px-7 sm:py-7">
+                    <div>
+                      <h3 className="text-xl font-semibold text-slate-50 sm:text-2xl">
+                        {project.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-slate-300/90 sm:text-[0.95rem]">
+                        {project.description}
+                      </p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {project.tech.map((tech) => (
+                          <span
+                            key={tech}
+                            className="rounded-full bg-slate-900/80 px-3 py-1 text-xs font-medium text-slate-200"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="mt-5 flex flex-wrap items-center gap-4 text-xs font-medium uppercase tracking-[0.18em]">
+                      <a
+                        href={project.link}
+                        className="inline-flex items-center gap-2 text-sky-300 hover:text-sky-200"
+                      >
+                        <span>Code</span>
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                      {project.liveLink && (
+                        <a
+                          href={project.liveLink}
+                          className="inline-flex items-center gap-2 text-slate-300 hover:text-slate-100"
+                        >
+                          <span>Live</span>
+                          <span aria-hidden="true">●</span>
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.article>
+          ))}
         </div>
-      </motion.div>
-    ))}
-  </div>
-</section>
-
-
-
+      </div>
+    </section>
   );
 };
 
