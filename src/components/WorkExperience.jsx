@@ -1,5 +1,5 @@
 import React from "react";
-import ibm from "/src/assets/ibmlogo.png";
+import ibm from "/src/assets/Ibmlogo.png";
 import knok from "/src/assets/knoklife_logo.png";
 import UofA from "/src/assets/UofA.png";
 import fluenty from "/src/assets/fluenty.png";
