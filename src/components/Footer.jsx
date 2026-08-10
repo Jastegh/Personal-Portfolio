@@ -1,40 +1,11 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-6">
-      <div className="container mx-auto flex flex-col items-center space-y-4 text-center">
-      <div className="border-t border-gray-600 w-3/4 mx-auto my-6"></div>
-        {/* Links with Icons */}
-        <div className="flex space-x-6">
-          <a
-            href="https://github.com/Jastegh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white flex items-center space-x-2"
-          >
-            <FaGithub size={20} />
-            <span>GitHub</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/jastegh/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white flex items-center space-x-2"
-          >
-            <FaLinkedin size={20} />
-            <span>LinkedIn</span>
-          </a>
-          <a
-            href="mailto:jasteghsingh04@gmail.com"
-            className="hover:text-white flex items-center space-x-2"
-          >
-            <FaEnvelope size={20} />
-            <span>Email</span>
-          </a>
-        </div>
-        {/* Text */}
-        <p className="text-sm">© 2025 Jastegh Singh. All Rights Reserved.</p>
+    <footer className="site-footer-surface pb-8 text-gray-300">
+      <div className="mx-auto max-w-6xl px-6 md:px-10 lg:px-16">
+        <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-slate-300/30 to-transparent" />
+        <p className="pt-6 text-center text-sm">
+          © 2026 Jastegh Singh. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );

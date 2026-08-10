@@ -14,17 +14,33 @@ import "react-vertical-timeline-component/style.min.css";
 const WorkExperience = () => {
   const experiences = [
     {
-      title: "Software Developer",
+      title: "Software Developer - Cloud Fullstack",
       company: "IBM",
       date: "September 2025 – Present",
       description: (
-        <ul className="mt-3 list-disc pl-5 text-sm leading-relaxed text-slate-200">
-          {/* <li>Add a short summary of your IBM role here.</li>
-          <li>Highlight 1–2 key projects, technologies, or impacts.</li>
-          <li>Focus on measurable outcomes or responsibilities.</li> */}
+        <ul className="mt-3 list-disc pl-5 text-base leading-relaxed text-slate-200">
+          <li>
+            Drive application support and operational reliability for large-scale enterprise
+            platforms, leading production incident investigation and resolution across AWS infrastructure,
+            Datadog monitoring, and Windows servers while building scripts and automations to streamline recurring operational tasks.
+          </li>
+          <li>
+            Contributed to the cloud modernization of 650+ enterprise retail sites through data
+            validation, environment configuration, deployment support, and root-cause analysis;
+            developed automated ADO and Python scripts to improve deployment reliability and test
+            coverage.
+          </li>
+          <li>
+            Supported the migration of 60,000+ healthcare appointments for a provincial digital
+            transformation initiative, validating data and coordinating migration activities to
+            preserve accuracy and service continuity.
+          </li>
         </ul>
       ),
       logo: ibm,
+      logoFrameClassName: "w-12",
+      logoClassName:
+        "h-auto w-12 object-contain brightness-0 invert drop-shadow-[0_2px_6px_rgba(255,255,255,0.3)]",
     },
     {
       title: "Software Developer",
@@ -74,6 +90,9 @@ const WorkExperience = () => {
         </ul>
       ),
       logo: UofA,
+      logoFrameClassName:
+        "h-10 w-10 overflow-hidden rounded-full drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]",
+      logoClassName: "h-10 w-10 -translate-y-2 origin-top scale-[1.65] object-contain",
     },
     {
       title: "Sales Manager",
@@ -103,7 +122,7 @@ const WorkExperience = () => {
   return (
     <section
       id="work-experience"
-      className="bg-gradient-to-b from-black via-slate-950 to-black py-16 text-white sm:py-20 lg:py-24"
+      className="section-surface-work border-t border-white/[0.05] py-16 text-white sm:py-20 lg:py-24"
     >
       <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 md:px-10 lg:px-16">
         <motion.div
@@ -146,11 +165,19 @@ const WorkExperience = () => {
                   icon={
                     <div className="flex h-full w-full items-center justify-center">
                       {exp.logo ? (
-                        <img
-                          src={exp.logo}
-                          alt={exp.company}
-                          className="h-10 w-10 rounded-full object-contain"
-                        />
+                        <div
+                          className={`flex shrink-0 items-center justify-center ${
+                            exp.logoFrameClassName ?? ""
+                          }`}
+                        >
+                          <img
+                            src={exp.logo}
+                            alt={exp.company}
+                            className={
+                              exp.logoClassName ?? "h-10 w-10 rounded-full object-contain"
+                            }
+                          />
+                        </div>
                       ) : (
                         <span className="text-[0.6rem] font-semibold text-slate-100">
                           {exp.company}
