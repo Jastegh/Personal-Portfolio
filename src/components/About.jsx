@@ -1,159 +1,139 @@
-
-import React from "react";
-import { motion } from "framer-motion";
-import avatarImage from "/src/assets/avatar.png";
+import { motion, useReducedMotion } from "framer-motion";
 import {
-  FaHtml5,
   FaCss3Alt,
-  FaJsSquare,
-  FaReact,
-  FaNodeJs,
-  FaGitAlt,
-  FaPython,
-  FaJava,
+  FaDatabase,
   FaFigma,
+  FaGitAlt,
+  FaHtml5,
+  FaJava,
+  FaJsSquare,
+  FaNodeJs,
+  FaPython,
+  FaReact,
 } from "react-icons/fa";
-import { SiTailwindcss, SiPostgresql, SiCplusplus, SiMysql, SiMongodb } from "react-icons/si";
+import {
+  SiAmazonwebservices,
+  SiCplusplus,
+  SiDatadog,
+  SiMongodb,
+  SiPostgresql,
+  SiTailwindcss,
+} from "react-icons/si";
+
+const reveal = (prefersReducedMotion, delay = 0) => ({
+  initial: { opacity: 0, y: prefersReducedMotion ? 0 : 22 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.22 },
+  transition: {
+    delay,
+    duration: prefersReducedMotion ? 0.01 : 0.65,
+    ease: [0.22, 0.9, 0.3, 1],
+  },
+});
+
+const skills = [
+  {
+    name: "AWS",
+    icon: <SiAmazonwebservices className="text-3xl text-orange-400" />,
+  },
+  { name: "Python", icon: <FaPython className="text-3xl text-blue-400" /> },
+  { name: "Java", icon: <FaJava className="text-3xl text-red-400" /> },
+  { name: "C++", icon: <SiCplusplus className="text-3xl text-blue-500" /> },
+  { name: "SQL", icon: <FaDatabase className="text-3xl text-blue-400" /> },
+  { name: "MongoDB", icon: <SiMongodb className="text-3xl text-green-500" /> },
+  { name: "HTML", icon: <FaHtml5 className="text-3xl text-orange-500" /> },
+  { name: "CSS", icon: <FaCss3Alt className="text-3xl text-blue-500" /> },
+  {
+    name: "JavaScript",
+    icon: <FaJsSquare className="text-3xl text-yellow-400" />,
+  },
+  { name: "React", icon: <FaReact className="text-3xl text-sky-400" /> },
+  { name: "Node.js", icon: <FaNodeJs className="text-3xl text-green-500" /> },
+  {
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss className="text-3xl text-teal-400" />,
+  },
+  { name: "Datadog", icon: <SiDatadog className="text-3xl text-purple-400" /> },
+  { name: "Git", icon: <FaGitAlt className="text-3xl text-red-400" /> },
+  {
+    name: "PostgreSQL",
+    icon: <SiPostgresql className="text-3xl text-blue-500" />,
+  },
+  { name: "Figma", icon: <FaFigma className="text-3xl text-pink-400" /> },
+];
 
 const About = () => {
-  const skills = [
-    { name: "Python", icon: <FaPython className="text-blue-400 text-3xl" /> },
-    { name: "Java", icon: <FaJava className="text-red-500 text-3xl" /> },
-    { name: "C++", icon: <SiCplusplus className="text-blue-500 text-3xl" /> },
-    { name: "SQL", icon: <SiMysql className="text-blue-700 text-3xl" /> },
-    { name: "MongoDB", icon: <SiMongodb className="text-green-500 text-3xl" /> },
-    { name: "HTML", icon: <FaHtml5 className="text-orange-500 text-3xl" /> },
-    { name: "CSS", icon: <FaCss3Alt className="text-blue-500 text-3xl" /> },
-    { name: "JavaScript", icon: <FaJsSquare className="text-yellow-400 text-3xl" /> },
-    { name: "React", icon: <FaReact className="text-blue-400 text-3xl" /> },
-    { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-3xl" /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400 text-3xl" /> },
-    { name: "Git", icon: <FaGitAlt className="text-red-500 text-3xl" /> },
-    { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600 text-3xl" /> },
-    { name: "Figma", icon: <FaFigma className="text-blue-500 text-3xl" /> },
-  ];
+  const prefersReducedMotion = useReducedMotion();
 
   return (
     <section
       id="about"
-      className="border-t border-white/10 bg-gradient-to-b from-slate-950 via-slate-950 to-black/90 py-16 text-white sm:py-20 lg:py-24"
+      className="section-surface-about border-t border-white/10 py-16 text-white sm:py-20 lg:py-28"
     >
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 md:px-10 lg:px-16">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7, ease: [0.22, 0.9, 0.3, 1] }}
-          className="max-w-2xl"
-        >
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-300">
+        <motion.div {...reveal(prefersReducedMotion)} className="max-w-3xl">
+          <p className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-sky-300">
             About
           </p>
-          <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl">
-            Hi, I&apos;m Jastegh Singh.
+          <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-[-0.035em] text-slate-50 sm:text-4xl lg:text-5xl">
+            About me.
           </h2>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-200/90 sm:text-base">
-            I&apos;m a curious and adaptable developer who enjoys working on diverse projects.
-            From building tools and applications to solving technical challenges, I approach my
-            work with focus and practicality. I value continuous learning and enjoy tackling new
-            problems that expand my understanding and skills. With a strong passion for coding,
-            I aim to create impactful solutions and contribute to meaningful projects.
+          <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+            I enjoy understanding how software works end to end, then making it clearer, more
+            dependable, and easier to use.
           </p>
         </motion.div>
 
-        <div className="grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)]">
-          {/* About card */}
-          {/* <motion.div
-            initial={{ opacity: 0, y: 24, scale: 0.97 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, ease: [0.22, 0.9, 0.3, 1] }}
-            className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-[0_24px_80px_rgba(15,23,42,0.95)] backdrop-blur-xl sm:p-7 lg:p-8"
-          >
-            <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-sky-400/10 via-fuchsia-400/10 to-indigo-400/10 opacity-80 mix-blend-soft-light" />
-            <div className="relative flex flex-col items-center gap-6 text-center sm:flex-row sm:text-left">
-              <div className="shrink-0">
-                <div className="relative inline-block">
-                  <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-sky-400 via-fuchsia-400 to-indigo-400 opacity-80 blur-md" />
-                  <img
-                    src={avatarImage}
-                    alt="Portrait of Jastegh Singh"
-                    className="relative h-40 w-40 rounded-full border border-white/20 object-cover shadow-[0_18px_50px_rgba(15,23,42,0.9)] sm:h-44 sm:w-44"
-                  />
-                </div>
-              </div>
-              <div className="space-y-3">
-                {/* <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-300">
-                  Developer snapshot
-                </p> */}
-                {/* <p className="text-sm leading-relaxed text-slate-200/90 sm:text-[0.95rem]">
-                  I enjoy taking ideas from rough sketches to reliable, well-structured solutions
-                  that feel good to use. I&apos;m comfortable moving between frontend polish and
-                  backend details, and I care about building things that last.
-                </p>
-                <p className="text-xs text-slate-400">
-                  Outside of coding, I keep learning—experimenting with new tools, patterns, and
-                  ways to make complex experiences feel simple.
-                </p>
-              </div>
-            </div>
-          </motion.div> */} 
-
-
-
-          <div className="p-6 bg-gray-800 rounded-lg shadow-md max-w-lg mx-auto">
-          <img
-            src={avatarImage}
-            alt="Avatar"
-            className="mx-auto mb-4  border-4 border-gray-600 shadow-lg"
-            style={{ width: '14.5rem', height: '14.5rem' }}
-          />
-          <p className="text-lg leading-relaxed">
-            I’m a curious and adaptable developer who enjoys working on diverse projects. 
-            From building tools and applications to solving technical challenges, 
-            I approach my work with focus and practicality. 
-            I value continuous learning and enjoy tackling new problems that expand 
-            my understanding and skills. With a strong passion for coding, 
-            I aim to create impactful solutions and contribute to meaningful projects.
+        <motion.div
+          {...reveal(prefersReducedMotion, 0.05)}
+          className="grid gap-6 border-y border-white/[0.08] py-8 text-[0.98rem] leading-7 text-slate-300 sm:py-10 sm:text-base sm:leading-8 md:grid-cols-2 md:gap-10"
+        >
+          <p>
+            I&apos;m a software developer whose experience spans cloud operations, full-stack
+            development, automation, systems programming, and applied machine-learning research.
+            I&apos;m comfortable moving between investigating how a system behaves and building the
+            software around it.
           </p>
-        </div>
+          <p>
+            I&apos;m drawn to practical problems where I can reduce ambiguity and leave something
+            better than I found it—whether that means debugging an issue, removing repetitive work
+            with a script, or taking a product from an early idea to a reliable implementation.
+          </p>
+        </motion.div>
 
-          {/* Skills card */}
-          <motion.div
-            initial={{ opacity: 0, y: 24, scale: 0.97 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.1, duration: 0.7, ease: [0.22, 0.9, 0.3, 1] }}
-            className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-[0_24px_80px_rgba(15,23,42,0.95)] backdrop-blur-xl sm:p-7 lg:p-8"
+        <motion.article
+          {...reveal(prefersReducedMotion, 0.08)}
+          className="rounded-[1.75rem] border border-white/[0.08] bg-[#08111e] p-5 sm:p-7 lg:p-8"
+        >
+          <p className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-sky-300">
+            Stack
+          </p>
+          <h3 className="mt-2 text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl">
+            Skills &amp; tools
+          </h3>
+
+          <ul
+            className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8"
+            aria-label="Skills and tools"
           >
-            <div className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(circle_at_0%_0%,rgba(56,189,248,0.4),transparent_55%),radial-gradient(circle_at_100%_0%,rgba(244,114,182,0.35),transparent_55%)] opacity-70 mix-blend-soft-light" />
-            <div className="relative">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-300">
-                Stack
-              </p>
-              <h3 className="mt-2 text-lg font-semibold text-slate-50 sm:text-xl">
-                Tools I&apos;m comfortable shipping with
-              </h3>
-              <div className="mt-6 grid grid-cols-3 gap-4 sm:grid-cols-4">
-                {skills.map((skill) => (
-                  <motion.div
-                    key={skill.name}
-                    whileHover={{ y: -4, scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 320, damping: 18 }}
-                    className="group flex flex-col items-center gap-1 rounded-2xl border border-white/5 bg-slate-950/40 px-3 py-3 text-center text-xs text-slate-100 shadow-[0_12px_30px_rgba(15,23,42,0.9)]"
-                  >
-                    <div className="transition-transform duration-300 group-hover:scale-110">
-                      {skill.icon}
-                    </div>
-                    <span className="mt-1 text-[0.7rem] font-medium text-slate-200/90">
-                      {skill.name}
-                    </span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
+            {skills.map((skill) => (
+              <motion.li
+                key={skill.name}
+                whileHover={prefersReducedMotion ? undefined : { y: -5, scale: 1.04 }}
+                transition={{ type: "spring", stiffness: 320, damping: 18 }}
+                className="group flex min-h-24 flex-col items-center justify-center gap-2 rounded-2xl border border-white/[0.07] bg-[#050c17] px-3 py-4 text-center shadow-[0_10px_24px_rgba(0,0,0,0.18)] transition-colors duration-300 hover:border-sky-300/25 hover:bg-[#0b1728]"
+              >
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:scale-110"
+                >
+                  {skill.icon}
+                </span>
+                <span className="text-xs font-medium text-slate-200">{skill.name}</span>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.article>
       </div>
     </section>
   );

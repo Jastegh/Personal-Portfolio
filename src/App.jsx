@@ -18,7 +18,6 @@ import {
 } from 'framer-motion';
 
 const heroTitle = "Hi, I'm Jastegh";
-const heroSubtitle = 'Crafting reliable, thoughtful experiences for the web.';
 
 const heroEase = [0.22, 0.9, 0.3, 1];
 const heroDuration = 0.7;
@@ -36,7 +35,7 @@ function SignatureVisual({ prefersReducedMotion }) {
     let width = (canvas.width = canvas.offsetWidth * window.devicePixelRatio);
     let height = (canvas.height = canvas.offsetHeight * window.devicePixelRatio);
 
-    const particleCount = 95;
+    const particleCount = 100;
     const particles = Array.from({ length: particleCount }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
@@ -221,19 +220,6 @@ function Hero() {
     },
   };
 
-  const subtitleVariants = {
-    hidden: { opacity: 0, y: 18 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.25,
-        duration: heroDuration,
-        ease: heroEase,
-      },
-    },
-  };
-
   const ctaVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -303,7 +289,7 @@ function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-950/70 px-4 py-1 text-[0.65rem] font-medium uppercase tracking-[0.2em] text-slate-200/90 backdrop-blur-md"
             >
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-sky-400 shadow-[0_0_12px_rgba(56,189,248,0.8)]" />
-              <span className="align-middle">Creative developer & builder</span>
+              <span className="align-middle">Software Developer · Cloud &amp; Full-stack</span>
             </motion.div>
 
             <motion.h1
@@ -322,15 +308,6 @@ function Hero() {
                 </motion.span>
               ))}
             </motion.h1>
-
-            <motion.p
-              initial="hidden"
-              animate="visible"
-              variants={subtitleVariants}
-              className="max-w-xl text-balance text-sm text-slate-200/90 sm:text-base md:text-lg"
-            >
-              {heroSubtitle}
-            </motion.p>
 
             <motion.div
               initial="hidden"
